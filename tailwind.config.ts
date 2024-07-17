@@ -1,20 +1,31 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{html,js}'],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    colors: {
+      'dark-purple': '#221c3d',
+      'primary-purple': '#8162ff',
+      'background-black': '#141418',
+      'secudary-black': '#1a1b1f',
+      'gray01': '#26272b',
+      'gray02': '#4e525b',
+      'gray03': '#838896',
+      'white': '#ffffff',
+      'red': '#ef4444',
+      'dark-red': '#2f1f1f'
     },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '8xl': '96rem',
+        '9xl': '128rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
   },
-  plugins: [],
-};
-export default config;
+}
