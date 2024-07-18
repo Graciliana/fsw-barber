@@ -22,7 +22,7 @@ export default function Home() {
         })}</span>
        <span className="text-white text-sm capitalize ml-2">{format(new Date(), "yyyy", {
        })}</span>
-      <div className="px-6 pt-6">
+      <div className="px-6 pt-6 ">
         <Search />
       </div>
     
