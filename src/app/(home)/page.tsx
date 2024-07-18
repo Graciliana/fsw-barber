@@ -1,0 +1,11 @@
+import Header from "../_components/header";
+export default function Home() {
+  return (
+ <div className="bg-background-black">
+      <Header />
+ </div>
+ 
+ 
+
+  );
+}
