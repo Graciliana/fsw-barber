@@ -1,7 +1,10 @@
 import { Separator } from "@radix-ui/react-separator";
 import Header from "../_components/header";
 import { format } from "date-fns";
-import {ptBR} from "date-fns/locale"
+import { ptBR } from "date-fns/locale";
+import Search from "./_components/search";
+
+
 export default function Home() {
   return (
  <div className="bg-background-black">
@@ -18,7 +21,11 @@ export default function Home() {
         locale: ptBR,
         })}</span>
        <span className="text-white text-sm capitalize ml-2">{format(new Date(), "yyyy", {
-      }) }</span>
+       })}</span>
+      <div className="px-6 pt-6">
+        <Search />
+      </div>
+    
 
  </div>
  
