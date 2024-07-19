@@ -3,6 +3,7 @@ import Header from "../_components/header";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import Search from "./_components/search";
+import Schedules from "../_components/schedules";
 
 
 export default function Home() {
@@ -25,7 +26,14 @@ export default function Home() {
       <div className="px-6 pt-6 ">
         <Search />
       </div>
-    
+      <div className="px-6 pt-14 ">
+        <h2 className='uppercase text-bold text-gray-03'>Agendamentos</h2>
+        <div className="mt-4">
+ <Schedules  />
+        </div>
+         
+      </div>
+   
 
  </div>
  
