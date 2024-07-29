@@ -6,6 +6,7 @@ import Search from "./_components/search";
 import Schedules from "../_components/schedules";
 import BarbershopItem from "./_components/barbershop-item";
 import { db } from "../_lib/prisma";
+import { Footer } from "../_components/footer";
 
 export default async function Home() {
   //chamar prisma e pegar barbearias
@@ -55,6 +56,19 @@ export default async function Home() {
           ))}
         </div>
       </div>
+      
+      <div className="px-6 pt-14">
+        <h2 className="text-bold uppercase text-gray-03 pb-6">Populares</h2>
+        <div className="flex gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden">
+          {barbershops.map((barbershop) => (
+            <BarbershopItem key={barbershop.id} barbershop={barbershop}/>
+          ))}
+        </div>
+      </div>
+
+      
+       
+      
       
     </div>
   );
