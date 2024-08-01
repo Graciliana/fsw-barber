@@ -12,6 +12,7 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
 model Account {
   id                String  @id @default(cuid())
   userId            String
@@ -85,7 +86,6 @@ model Service {
   name         String
   description  String
   price        Decimal    @db.Decimal(10, 2)
-  imageUrl    String
+  imageUrl     String
   bookings     Booking[]
-  
 }
