@@ -49,6 +49,8 @@ model User {
   accounts      Account[]
   sessions      Session[]
   bookings      Booking[]
+
+  Authenticator Authenticator[]
 }
 
 model VerificationToken {
@@ -88,4 +90,18 @@ model Service {
   price        Decimal    @db.Decimal(10, 2)
   imageUrl     String
   bookings     Booking[]
+}
+model Authenticator {
+  credentialID         String  @unique
+  userId               String
+  providerAccountId    String
+  credentialPublicKey  String
+  counter              Int
+  credentialDeviceType String
+  credentialBackedUp   Boolean
+  transports           String?
+ 
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ 
+  @@id([userId, credentialID])
 }
